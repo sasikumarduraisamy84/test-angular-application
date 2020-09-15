@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+
+  example:
+    container_name: test-angular-application
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4201:4200'
